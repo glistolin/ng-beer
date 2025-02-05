@@ -1,0 +1,18 @@
+# 🔹 Ignore dependencies
+node_modules/
+
+# 🔹 Ignore build and compiled files
+dist/
+out-tsc/
+coverage/
+
+# 🔹 Ignore Angular CLI cache
+.angular/
+
+# 🔹 Ignore IDE & editor settings
+.vscode/
+.idea/
+*.iml
+
+# 🔹 Ignore logs & temp files
+npm-debug.log*

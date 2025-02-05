@@ -1,0 +1,28 @@
+// 📌 Primary colors
+$primary-yellow: #FFC71C; // Main yellow color (background and header)
+$primary-white: #FFFDF4; // Off-white background
+
+// 📌 Secondary colors
+$secondary-black: #000000; // Text color
+$secondary-gray: #EFEFEF; // Light gray for the card background
+$secondary-blue: #F8F9FC; // Subtle blue for card inner background
+
+// 📌 Accent colors
+$accent-orange: #FFB000; // Orange star color
+$accent-dark-gray: #333333; // Border and detail button text color
+
+// 📌 Utility colors
+$hover-gray: #D6D6D6; // Hover background for interactive elements
+$slider-yellow: #FFC107; // Yellow for the slider active part
+$slider-black: #000000; // Black for the slider inactive part
+
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+@mixin respond($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}

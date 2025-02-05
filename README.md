@@ -1,4 +1,4 @@
-# Angular 18+ Starter
+# Angular 18+ Beer App
 
 Simple Angular 18+ Starter. It contains:
 
@@ -15,7 +15,7 @@ Simple Angular 18+ Starter. It contains:
 
 ## Getting Started
 
-1. Clone the repository `gh repo clone piotrlewandowski/angular-starter` (or if you're not using GitHub CLI: `git clone git@github.com:piotrlewandowski/angular-starter.git`)
+1. Clone the repository (or if you're not using GitHub CLI: `git clone https://github.com/glistolin/ng-beer.git`)
 2. If you're using NVM run `nvm use` inside project directory to use node version set in `.nvmrc` file
 3. Run `npm install` or `npm i` to install all the dependencies
 4. To begin development task, run `npm start`

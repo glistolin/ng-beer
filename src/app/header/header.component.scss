@@ -1,0 +1,25 @@
+@import "../../styles/variables";
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 120px;
+  padding-inline: 2rem;
+  background-image: url("../../assets/drawing.svg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  .logo {
+    width: 180px;
+    max-width: 70%;
+  }
+
+  @include respond($breakpoint-lg) {
+    height: 160px;
+
+    .logo {
+      width: 250px;
+    }
+  }
+}

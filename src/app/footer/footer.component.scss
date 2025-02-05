@@ -1,0 +1,15 @@
+@import "../../styles/_variables";
+
+.footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $primary-yellow;
+  background-repeat: no-repeat;
+  height: 75px;
+  padding-inline: 2rem;
+
+  .logo {
+    width: 125px;
+  }
+}
