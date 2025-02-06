@@ -16,7 +16,7 @@ import { BeerSort } from '../models/beer.model';
 })
 export class BeerFiltersComponent implements OnInit {
   beerNameFilter = new FormControl('', { nonNullable: true });
-  alcoholRangeFilter = new FormControl<[number, number]>([0, 100], {
+  alcoholRangeFilter = new FormControl<[number, number]>([0, 23], {
     nonNullable: true,
   });
   favoriteBeersFilter = new FormControl(false, { nonNullable: true });
@@ -24,7 +24,7 @@ export class BeerFiltersComponent implements OnInit {
     nonNullable: true,
   });
 
-  alcoholContent = model<[number, number]>([0, 100]);
+  alcoholContent = model<[number, number]>([0, 23]);
 
   ngOnInit() {
   }

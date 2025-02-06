@@ -1,0 +1,22 @@
+<div class="beer-list">
+  @for (beer of filteredBeers; track $index) {
+    <div class="beer-item">
+      <div class="beer-header">
+        <img
+          class="favorite-icon"
+          [src]="beer.favourite ? 'assets/star-selected-24px.svg' : 'assets/star_outline-24px.svg'"
+          (click)="toggleFavorite(beer)"
+          alt="Favorite icon"
+        />
+      </div>
+      <h3>{{ beer.name }}</h3>
+      <img [src]="beer.image_url" alt="{{ beer.name }}" (error)="onImageError($event)">
+      <h4>ABV: {{ beer.abv }} %</h4>
+      <button class="details-button">
+        <img src="assets/info-24px.svg" alt="Info icon" />
+        DETAILS
+      </button>
+    </div>
+  }
+  
+</div>

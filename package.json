@@ -1,5 +1,5 @@
 {
-  "name": "angular-starter",
+  "name": "ng-beer",
   "version": "3.0.0",
   "scripts": {
     "clean": "rimraf dist",

@@ -8,7 +8,7 @@ $input-max-width: 250px;
   justify-content: center;
   align-items: flex-start;
   gap: 1rem;
-  padding-inline: 2rem;
+  padding-inline: rem;
   transition: box-shadow 0.3s ease-in-out;
 
   @media screen and (min-width: $breakpoint-md) {
