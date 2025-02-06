@@ -1,0 +1,15 @@
+<div #filters class="filters">
+  <div class="input">
+    <label for="name-filter">Filter by name</label>
+    <span class="p-input-icon-left">
+      <i class="pi pi-search"></i>
+      <input id="name-filter" type="text" pInputText [formControl]="beerNameFilter" />
+    </span>
+  </div>
+
+  <div class="input">
+    <label id="alcohol-filter">Alcohol content: {{ alcoholContent()[0] + '% - ' + alcoholContent()[1] + '%'}}</label>
+    <p-slider ariaLabelledBy="alcohol-filter" [formControl]="alcoholRangeFilter" [range]="true" [min]="0"
+      [max]="100"></p-slider>
+  </div>
+</div>

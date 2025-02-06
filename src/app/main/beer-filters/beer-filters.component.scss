@@ -1,0 +1,74 @@
+@import '../../../styles/variables';
+
+$button-width: 2.357rem;
+$input-max-width: 250px;
+
+
+$button-width: 2.357rem;
+$input-max-width: 250px;
+
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  padding-inline: 2rem;
+  transition: box-shadow 0.3s ease-in-out;
+
+  @media screen and (min-width: $breakpoint-md) {
+    box-shadow: none;
+    transition: none;
+  }
+}
+
+.filters-button {
+  width: $button-width;
+  flex-shrink: 0;
+
+  @media screen and (min-width: $breakpoint-md) {
+    display: none;
+  }
+}
+
+.filters {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 1rem;
+  width: calc(100% - $button-width);
+  max-width: $breakpoint-lg;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+
+  @media screen and (min-width: $breakpoint-xs) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(max-content, $input-max-width));
+    grid-gap: 1rem 2rem;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: $breakpoint-sm) {
+    grid-gap: 1rem 4rem;
+  }
+
+  @media screen and (min-width: $breakpoint-md) {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(max-content, $input-max-width)
+    );
+    justify-content: center;
+    max-height: initial;
+    overflow: initial;
+  }
+
+  &-open {
+    max-height: 350px;
+    padding-bottom: 1rem;
+    overflow: visible;
+  }
+
+  .input {
+    max-width: $input-max-width;
+  }
+}
