@@ -1,0 +1,16 @@
+@mixin focused() {
+  outline: $focusOutline;
+  outline-offset: $focusOutlineOffset;
+  box-shadow: $focusShadow;
+}
+
+@mixin focused-input() {
+  outline: $focusOutline;
+  outline-offset: $inputFocusOutlineOffset;
+  box-shadow: $focusShadow;
+  border-color: $inputFocusBorderColor;
+}
+
+@mixin invalid-input() {
+  border-color: $inputErrorBorderColor;
+}

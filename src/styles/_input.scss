@@ -1,0 +1,21 @@
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-height: 58px;
+  width: 100%;
+
+  label {
+    font-size: 1rem;
+    font-weight: $font-weight-regular;
+    letter-spacing: 0.03125rem;
+  }
+
+  p-slider, .p-dropdown, input {
+    width: 100%;
+  }
+
+  p-slider, p-checkbox {
+    margin-block: auto;
+  }
+}

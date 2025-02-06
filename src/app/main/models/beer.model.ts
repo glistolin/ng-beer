@@ -6,3 +6,8 @@ export interface Beer {
   image_url: string;
   favourite?: boolean;
 }
+
+export enum BeerSort {
+  Name = 'name',
+  Alcohol = 'alcohol',
+}
