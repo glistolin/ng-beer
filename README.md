@@ -1,6 +1,7 @@
 # Angular 18+ Beer App
+Demo: https://glistolin.github.io/ng-beer/
 
-Simple Angular 18+ Starter. It contains:
+Simple Angular 18+ Beer App. It contains:
 
 - [x] Angular 18.0.2
 - [x] Angular CLI 18.0.3
@@ -8,6 +9,8 @@ Simple Angular 18+ Starter. It contains:
 - [x] Live Reloading
 - [x] TypeScript 5.4.5
 - [x] RxJS 7.8.1
+- [x] PrimeNG
+- [x] Angular Signal Store
 
 ## Prerequisites
 

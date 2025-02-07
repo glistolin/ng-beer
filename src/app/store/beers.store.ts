@@ -75,14 +75,6 @@ export const BeersStore = signalStore(
   withComputed(
     ({ beers, query, sort, alcoholRange, showFavorites, favoriteIds }) => ({
       filteredBeers: computed(() => {
-        console.log(
-          "Computed triggered:",
-          query(),
-          sort(),
-          alcoholRange(),
-          showFavorites(),
-        );
-
         let filtered = searchBeers(beers(), query());
 
         filtered = filtered.filter(
