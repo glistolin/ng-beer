@@ -1,5 +1,7 @@
 # 🔹 Ignore dependencies
 node_modules/
+src/.DS_Store
+src/app/main/.DS_Store
 
 # 🔹 Ignore build and compiled files
 dist/
@@ -16,3 +18,4 @@ coverage/
 
 # 🔹 Ignore logs & temp files
 npm-debug.log*
+

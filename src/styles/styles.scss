@@ -1,7 +1,9 @@
-@import '_variables';
-@import '_slider';
+@import "_variables";
+@import "_slider";
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -33,9 +35,8 @@ label,
 button,
 select,
 summary,
-[type='radio'],
-[type='submit'],
-[type='checkbox'] {
+[type="radio"],
+[type="submit"],
+[type="checkbox"] {
   cursor: pointer;
 }
-

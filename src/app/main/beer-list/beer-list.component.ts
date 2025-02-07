@@ -1,44 +1,39 @@
-import { Component, inject, OnInit } from '@angular/core';
-import { Beer } from '../models/beer.model';
-import { BeerService } from '../../services/beer.service';
+import { Component, inject, input, OnInit } from "@angular/core";
+import { Beer } from "../models/beer.model";
+import { BeersStore } from "../../store/beers.store";
+import { BeerDialogComponent } from "../beer-dialog/beer-dialog.component";
+import { DialogService } from "primeng/dynamicdialog";
 
 @Component({
-  selector: 'app-beer-list',
-  templateUrl: './beer-list.component.html',
-  styleUrls: ['./beer-list.component.scss'],
+  selector: "app-beer-list",
+  templateUrl: "./beer-list.component.html",
+  styleUrls: ["./beer-list.component.scss"],
+  imports: [BeerDialogComponent],
   standalone: true,
+  providers: [DialogService],
 })
-export class BeerListComponent implements OnInit {
-  beers: Beer[] = [];
+export class BeerListComponent {
   filteredBeers: Beer[] = [];
   favorites = new Set<number>();
-  private beerService = inject(BeerService);
+  readonly beers = input<Beer[]>([]);
+  private _dialogService = inject(DialogService);
 
-  constructor() { 
-    this.fetchBeers()
-  }
-
-  fetchBeers() {
-    this.beerService.fetchBeers().subscribe((data) => {
-      this.beers = data;
-      this.filteredBeers = data.map(beer => ({
-        ...beer,
-        image_url: beer.image_url ? beer.image_url : 'assets/placeholder.png'
-      }));;
-
-      console.log(this.filteredBeers)
-    });
-  }
+  store = inject(BeersStore);
 
   onImageError(event: any): void {
-    event.target.src = 'assets/placeholder.png';
+    event.target.src = "assets/placeholder.png";
   }
 
-  toggleFavorite(beer: any) {
-    beer.favourite = !beer.favourite;
+  toggleFavorite(beer: any): void {
+    this.store.toggleFavorite(beer.id);
   }
 
-  ngOnInit() {
+  showDetails(beer: Beer) {
+    this._dialogService.open(BeerDialogComponent, {
+      modal: true,
+      styleClass: "dialog",
+      header: beer.name,
+      data: { beer: beer },
+    });
   }
-
 }

@@ -11,11 +11,14 @@
     letter-spacing: 0.03125rem;
   }
 
-  p-slider, .p-dropdown, input {
+  p-slider,
+  .p-dropdown,
+  input {
     width: 100%;
   }
 
-  p-slider, p-checkbox {
+  p-slider,
+  p-checkbox {
     margin-block: auto;
   }
 }

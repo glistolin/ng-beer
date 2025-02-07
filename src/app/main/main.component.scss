@@ -14,3 +14,21 @@ main {
   width: 100%;
   padding-block-start: 1rem;
 }
+
+.scrollable {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: auto;
+}
+
+.scroll-top-button {
+  position: sticky;
+  left: 95%;
+  bottom: 10px;
+  margin: 0 10px 10px 0;
+  flex-shrink: 0;
+  background-color: var(--white);
+  border-color: var(--gray-light);
+  box-shadow: var(--box-shadow-sm);
+}

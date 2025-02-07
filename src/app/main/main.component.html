@@ -1,5 +1,19 @@
 <main>
   <app-beer-filters></app-beer-filters>
-  <app-beer-list></app-beer-list>
+  <div #scrollable class="scrollable">
+    <app-beer-list [beers]="store.filteredBeers()"></app-beer-list>
+    @if (isScrolled()) {
+      <button
+        icon="pi"
+        pButton
+        pRipple
+        class="scroll-top-button p-button-secondary p-button-outlined"
+        (click)="scrollToTop()"
+        pTooltip="Scroll to top"
+        tooltipPosition="left"
+      >
+        <img alt="scroll-top icon" src="../../assets/scroll-top.svg" />
+      </button>
+    }
+  </div>
 </main>
-

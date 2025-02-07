@@ -1,27 +1,56 @@
-<div #filters class="filters">
+<i class="pi pi-bars filters-button" (click)="toggleFilters()"></i>
+
+<div #filters class="filters" [class.filters-open]="filtersOpen">
   <div class="input">
     <label for="name-filter">Filter by name</label>
     <span class="p-input-icon-left">
       <i class="pi pi-search"></i>
-      <input id="name-filter" type="text" pInputText [formControl]="beerNameFilter" />
+      <input
+        id="name-filter"
+        type="text"
+        pInputText
+        [formControl]="beerNameFilter"
+      />
     </span>
   </div>
 
   <div class="input">
-    <label id="alcohol-filter">Alcohol content (%) <span>{{ alcoholContent()[0] + '% - ' + alcoholContent()[1] + '%'}}</span></label>
-    <p-slider ariaLabelledBy="alcohol-filter" [formControl]="alcoholRangeFilter" [range]="true" [min]="0"
-      [max]="100"></p-slider>
-      
+    <label id="alcohol-filter">Alcohol content (%)</label>
+
+    <div class="slider-container">
+      <p-slider
+        [formControl]="alcoholRangeFilter"
+        [range]="true"
+        [min]="0"
+        [max]="100"
+        (onChange)="updateSliderPositions()"
+        (onSlideEnd)="updateSliderPositions()"
+      ></p-slider>
+
+      <span class="slider-value left-value"
+        >{{ store.alcoholRange()[0] }}%</span
+      >
+      <span class="slider-value right-value"
+        >{{ store.alcoholRange()[1] }}%</span
+      >
+    </div>
   </div>
 
   <div class="input">
     <label for="favourites-filter">Show only favourites</label>
-    <p-checkbox inputId="favourites-filter" [formControl]="favoriteBeersFilter" [binary]="true"></p-checkbox>
+    <p-checkbox
+      inputId="favourites-filter"
+      [formControl]="favoriteBeersFilter"
+      [binary]="true"
+    ></p-checkbox>
   </div>
 
   <div class="input">
     <label id="sort-select">Sort</label>
-    <p-dropdown ariaLabelledBy="name" [formControl]="beerSortControl" [options]="sortOptions()"></p-dropdown>
+    <p-dropdown
+      ariaLabelledBy="name"
+      [formControl]="beerSortControl"
+      [options]="sortOptions()"
+    ></p-dropdown>
   </div>
-
 </div>

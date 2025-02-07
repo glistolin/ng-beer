@@ -1,4 +1,4 @@
-@import '../../../styles/variables';
+@import "../../../styles/variables";
 
 $button-width: 2.357rem;
 $input-max-width: 250px;
@@ -18,8 +18,17 @@ $input-max-width: 250px;
 }
 
 .filters-button {
-  width: $button-width;
-  flex-shrink: 0;
+  font-size: 2rem;
+  color: $primaryTextColor;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+  display: block;
+  margin: 10px auto;
+  position: relative;
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  z-index: 1000;
 
   @media screen and (min-width: $breakpoint-md) {
     display: none;
@@ -36,6 +45,13 @@ $input-max-width: 250px;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-in-out;
+
+  &.filters-open {
+    display: flex;
+    max-height: 350px;
+    padding-bottom: 1rem;
+    overflow: visible;
+  }
 
   @media screen and (min-width: $breakpoint-xs) {
     display: grid;
@@ -66,5 +82,29 @@ $input-max-width: 250px;
 
   .input {
     max-width: $input-max-width;
+  }
+
+  .slider-container {
+    position: relative;
+    width: 100%;
+    margin-top: 10px; /* Adjust space for better layout */
+  }
+
+  .slider-value {
+    position: absolute;
+    top: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+    transform: translateX(-50%);
+    transition: 0.1s ease;
+  }
+
+  .left-value {
+    left: 0%;
+  }
+
+  .right-value {
+    left: 100%;
   }
 }

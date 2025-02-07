@@ -1,4 +1,3 @@
-// Fonts
 $font-family: "Roboto";
 $font-family-alt: sans-serif;
 
@@ -11,24 +10,22 @@ $font-weight-regular: 400;
 $font-weight-semibold: 600;
 $font-weight-bold: 700;
 
-//focus
 $focusOutlineColor: $primaryColor !default;
 $focusOutline: 0 none !default;
 $focusOutlineOffset: 0 !default;
-$inputFocusOutlineOffset:$focusOutlineOffset !default;
+$inputFocusOutlineOffset: $focusOutlineOffset !default;
 $focusShadow: 0 0 0 1px $focusOutlineColor !default;
 
-@import 'general';
-@import 'form';
-@import 'mixins';
-@import 'common';
-@import 'input';
-@import 'checkbox';
-@import 'buttons';
-@import 'panel';
-@import 'overlay';
-@import 'overlaypanel';
-
+@import "general";
+@import "form";
+@import "mixins";
+@import "common";
+@import "input";
+@import "checkbox";
+@import "buttons";
+@import "panel";
+@import "overlay";
+@import "overlaypanel";
 
 $breakpoint-2xs: 480px;
 $breakpoint-xs: 640px;
@@ -36,8 +33,6 @@ $breakpoint-sm: 768px;
 $breakpoint-md: 992px;
 $breakpoint-lg: 1200px;
 $breakpoint-xl: 1400px;
-
-
 
 @mixin respond($breakpoint) {
   @media (min-width: $breakpoint) {

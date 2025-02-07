@@ -8,6 +8,6 @@ export interface Beer {
 }
 
 export enum BeerSort {
-  Name = 'name',
-  Alcohol = 'alcohol',
+  Name = "name",
+  Alcohol = "alcohol",
 }

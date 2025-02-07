@@ -1,0 +1,13 @@
+<div class="dialog-content">
+  <img class="beer-image" [src]="beer()?.image_url" alt="beer img" />
+  <div class="beer-details">
+    <span>
+      <span class="detail-title">Description: </span>
+      {{ beer()?.description }}
+    </span>
+    <span
+      ><span class="detail-title">Alcohol by volume (ABV): </span
+      >{{ beer()?.abv }}</span
+    >
+  </div>
+</div>
