@@ -1,5 +1,5 @@
 <div class="dialog-content">
-  <img class="beer-image" [src]="beer()?.image_url" alt="beer img" />
+  <img class="beer-image" [src]="beer()?.image_url" alt="beer img" (error)="onImageError($event)" />
   <div class="beer-details">
     <span>
       <span class="detail-title">Description: </span>

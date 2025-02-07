@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "AngularStarter": {
+    "AngularBeer": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -61,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "AngularStarter:build:production"
+              "buildTarget": "AngularBeer:build:production"
             },
             "development": {
-              "buildTarget": "AngularStarter:build:development"
+              "buildTarget": "AngularBeer:build:development"
             }
           },
           "defaultConfiguration": "development"

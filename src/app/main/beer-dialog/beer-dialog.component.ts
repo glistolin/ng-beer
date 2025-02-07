@@ -17,4 +17,8 @@ export class BeerDialogComponent {
   constructor() {
     this.beer.set(this._config.data.beer as Beer);
   }
+
+  onImageError(event: any): void {
+    event.target.src = "assets/placeholder.png";
+  }
 }
