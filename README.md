@@ -1,5 +1,6 @@
 # Angular 18+ Beer App
-Demo: [Angular Beer](https://glistolin.github.io/ng-beer/) 
+
+Demo: [Angular Beer](https://glistolin.github.io/ng-beer/)
 
 Simple Angular 18+ Beer App. It contains:
 
